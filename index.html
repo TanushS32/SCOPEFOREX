@@ -1,134 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SCOPE FOREX PVT. LTD. - RBI licensed foreign exchange and financial service provider in Chennai. We offer foreign currency exchange, forex cards, remittances, Western Union, demat, and insurance services." />
-  <meta name="keywords" content="Forex, Currency Exchange, Remittance, Forex Card, Demat, Insurance, Chennai, Western Union" />
-  <meta name="author" content="Scope Forex Pvt. Ltd." />
+  <meta name="description" content="Scope Forex Pvt. Ltd. - RBI Licensed Forex Dealer in Chennai offering currency exchange, forex cards, international remittance, demat, and insurance services.">
+  <meta name="keywords" content="Forex, Currency Exchange, Forex Cards, Remittance, Western Union, Money Transfer, Angel Broking, Star Health Insurance, Chennai Forex">
+  <meta name="author" content="Scope Forex Pvt. Ltd.">
   <title>Scope Forex Pvt. Ltd.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header, footer { background: #003366; color: white; padding: 20px; text-align: center; }
-    nav { background: #00509e; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
-    .hero { background: url('https://source.unsplash.com/1600x600/?currency,finance') center/cover no-repeat; color: white; padding: 80px 20px; text-align: center; }
-    .hero h1 { font-size: 3rem; }
-    .section { padding: 40px 20px; text-align: center; }
-    .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .service { background: #f0f0f0; padding: 20px; border-radius: 10px; width: 300px; }
-    .contact, .why-us, .faq, .map { background: #fafafa; margin: 20px 0; }
-    .footer-columns { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px; }
-    .footer-col { flex: 1; min-width: 200px; margin: 10px; color: white; }
-    .trust-badge { position: fixed; top: 10px; left: 10px; background: gold; padding: 10px; font-weight: bold; border-radius: 5px; z-index: 1000; }
-    .floating-btn { position: fixed; right: 15px; bottom: 90px; background: green; color: white; padding: 10px 15px; border-radius: 30px; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
-    .floating-call { bottom: 50px; background: #007BFF; }
-    iframe { border: 0; width: 100%; height: 300px; }
-    @media (max-width: 768px) {
-      .services { flex-direction: column; align-items: center; }
-      .footer-columns { flex-direction: column; text-align: center; }
-    }
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: 'Roboto', sans-serif; line-height: 1.6; color: #222; background: #f9f9f9;}
+    header {background: #002244; color: white; padding: 1.5rem 0; text-align: center;}
+    nav ul {display: flex; justify-content: center; list-style: none; gap: 2rem; margin-top: 1rem;}
+    nav a {color: white; text-decoration: none; font-weight: bold;}
+    .container {max-width: 1200px; margin: auto; padding: 2rem; background: white;}
+    .hero {text-align: center; padding: 3rem 1rem; background: #eaf2f8;}
+    .hero h1 {font-size: 2.5rem; color: #002244; margin-bottom: 1rem;}
+    .section {margin-top: 3rem;}
+    .section h2 {color: #002244; border-left: 4px solid #002244; padding-left: 1rem; margin-bottom: 1rem;}
+    .services, .why-choose, .faq {display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;}
+    .service, .why, .faq-item {background: #f4f4f4; padding: 1.5rem; border-radius: 10px;}
+    footer {background: #002244; color: white; text-align: center; padding: 2rem 1rem; margin-top: 3rem;}
+    .contact-info p {margin: 0.5rem 0;}
+    .floating-btn {position: fixed; bottom: 2rem; right: 2rem; z-index: 999; display: flex; flex-direction: column; gap: 1rem;}
+    .floating-btn a {display: flex; align-items: center; justify-content: center; width: 55px; height: 55px; border-radius: 50%; background: #25D366; color: white; font-size: 1.5rem; text-decoration: none; box-shadow: 0 0 10px rgba(0,0,0,0.3);}
+    .floating-btn a.call {background: #007bff;}
+    iframe.map {width: 100%; height: 300px; border: 0; border-radius: 10px;}
+    @media (max-width: 768px) {.services, .why-choose, .faq {grid-template-columns: 1fr;}}
   </style>
 </head>
+
 <body>
-
-  <div class="trust-badge">RBI Licensed</div>
-
   <header>
     <h1>Scope Forex Pvt. Ltd.</h1>
-    <p>Your Trusted Partner in Forex, Finance & Remittances</p>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#whyus">Why Choose Us</a>
-    <a href="#contact">Contact</a>
-    <a href="#faq">FAQ</a>
-  </nav>
+  <div class="hero">
+    <h1>Trusted RBI Licensed Forex Dealer in Chennai</h1>
+    <p>Foreign currency exchange, international remittance, forex cards, demat & insurance services – All in one place.</p>
+  </div>
 
-  <section class="hero">
-    <h1>Reliable Forex & Financial Solutions</h1>
-    <p>Foreign Currency | Forex Cards | Remittance | Demat & Insurance</p>
-  </section>
+  <div class="container">
+    <section id="services" class="section">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service">💱 Buy & Sell Foreign Currency</div>
+        <div class="service">💳 Forex Card Issuance</div>
+        <div class="service">🌍 International Remittance</div>
+        <div class="service">📨 Western Union, MoneyGram, Ria</div>
+        <div class="service">📈 Demat Services (Angel Broking)</div>
+        <div class="service">🛡️ Insurance Services (Star Health)</div>
+      </div>
+    </section>
 
-  <section id="services" class="section services">
-    <div class="service">
-      <h3>Foreign Currency Exchange</h3>
-      <p>Buy & sell foreign currency at competitive rates.</p>
-    </div>
-    <div class="service">
-      <h3>Forex Cards</h3>
-      <p>Prepaid forex cards for travel and business.</p>
-    </div>
-    <div class="service">
-      <h3>International Remittance</h3>
-      <p>Send money abroad safely and quickly via wire transfer.</p>
-    </div>
-    <div class="service">
-      <h3>Western Union / MoneyGram / Ria</h3>
-      <p>Receive money from abroad instantly.</p>
-    </div>
-    <div class="service">
-      <h3>Demat Services</h3>
-      <p>Partnered with Angel Broking for stock market access.</p>
-    </div>
-    <div class="service">
-      <h3>Insurance Services</h3>
-      <p>Health insurance solutions via Star Health.</p>
-    </div>
-  </section>
+    <section id="why" class="section">
+      <h2>Why Choose Us</h2>
+      <div class="why-choose">
+        <div class="why">✔ RBI Licensed & Trusted since 10+ years</div>
+        <div class="why">✔ Transparent Rates with Quick Service</div>
+        <div class="why">✔ One-Stop Solution: Forex, Demat & Insurance</div>
+        <div class="why">✔ Friendly Staff & Customer Satisfaction</div>
+      </div>
+    </section>
 
-  <section id="whyus" class="section why-us">
-    <h2>Why Choose Us</h2>
-    <p>✓ RBI Licensed Dealer<br/>✓ Trusted by Thousands<br/>✓ Over 10+ Years of Experience<br/>✓ Fast and Secure Transactions<br/>✓ Wide Range of Financial Services</p>
-  </section>
+    <section id="faq" class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="faq-item"><strong>Do I need ID proof to exchange currency?</strong><br>Yes, a valid government-issued ID proof is mandatory.</div>
+        <div class="faq-item"><strong>Can I send money abroad from India?</strong><br>Yes, we facilitate outward remittance via RBI-compliant channels.</div>
+        <div class="faq-item"><strong>Do you provide forex cards instantly?</strong><br>Yes, forex cards can be issued on the spot after verification.</div>
+        <div class="faq-item"><strong>Do you offer health insurance assistance?</strong><br>Yes, partnered with Star Health for personalized plans.</div>
+      </div>
+    </section>
 
-  <section id="faq" class="section faq">
-    <h2>Frequently Asked Questions</h2>
-    <p><strong>Q:</strong> Do I need ID proof to exchange currency?<br/><strong>A:</strong> Yes, a valid government-issued ID is required.</p>
-    <p><strong>Q:</strong> How long does a remittance take?<br/><strong>A:</strong> Usually within 24-48 hours depending on destination.</p>
-    <p><strong>Q:</strong> Are forex rates live?<br/><strong>A:</strong> Rates update daily; contact us for current rates.</p>
-  </section>
-
-  <section class="section map">
-    <h2>Find Us</h2>
-    <iframe src="https://www.google.com/maps?q=13.0861649,80.1582822&hl=es;z=14&output=embed"></iframe>
-  </section>
-
-  <section id="contact" class="section contact">
-    <h2>Contact Us</h2>
-    <p><strong>ADDRESS:</strong> WESTERN UNION- SCOPE FOREX PVT. LTD.,<br/>
-    DOOR NO.91, SHOP NO.14 & 14A, BALAMURALI THEATRE COMPLEX,<br/>
-    POONAMALLEE HIGH ROAD, Chennai, Tamil Nadu, 600107</p>
-    <p><strong>Phone:</strong> <a href="tel:9381111767">9381111767</a></p>
-    <p><strong>Email:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919381111767" target="_blank">Chat with us</a></p>
-  </section>
-
-  <a href="tel:9381111767" class="floating-btn floating-call">📞 Call Now</a>
-  <a href="https://wa.me/919381111767" target="_blank" class="floating-btn">💬 WhatsApp</a>
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>ADDRESS:</strong> Western Union - Scope Forex Pvt. Ltd.,<br>Door No.91, Shop No.14 & 14A, Balamurali Theatre Complex, Poonamallee High Road, Chennai, Tamil Nadu 600107</p>
+        <p><strong>Phone:</strong> <a href="tel:9381111767">9381111767</a></p>
+        <p><strong>Email:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919381111767">9381111767</a></p>
+      </div>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15544.44842577458!2d80.09644400827304!3d13.072774735339483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261647b0d6f4f%3A0xa381bc358f7c478f!2sBalamurali%20Theatre%20Complex!5e0!3m2!1sen!2sin!4v1721300000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </div>
 
   <footer>
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4>Company</h4>
-        <p>Scope Forex Pvt. Ltd. is a licensed money exchanger and financial services provider. We aim to offer reliable, transparent and efficient service to all our clients.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <p><a href="#services" style="color:white;">Services</a></p>
-        <p><a href="#contact" style="color:white;">Contact</a></p>
-        <p><a href="#faq" style="color:white;">FAQ</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Get in Touch</h4>
-        <p>Email: scopeforex@yahoo.com</p>
-        <p>Phone: 9381111767</p>
-        <p>WhatsApp: 9381111767</p>
-      </div>
-    </div>
     <p>&copy; 2025 Scope Forex Pvt. Ltd. All rights reserved.</p>
   </footer>
 
+  <div class="floating-btn">
+    <a href="tel:9381111767" class="call" title="Call Us">📞</a>
+    <a href="https://wa.me/919381111767" title="Chat on WhatsApp">💬</a>
+  </div>
 </body>
+
 </html>
