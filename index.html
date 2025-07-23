@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Scope Forex Pvt. Ltd. is an RBI licensed forex dealer offering currency exchange, remittance, forex cards, insurance, and demat services in Chennai." />
-  <meta name="keywords" content="Forex, Currency Exchange, Remittance, Forex Card, Western Union, Moneygram, RIA, Insurance, Demat, Angel Broking, Star Health" />
-  <meta name="author" content="Scope Forex Pvt. Ltd." />
+  <meta name="description" content="Scope Forex Pvt. Ltd. is an RBI licensed currency exchange dealer offering foreign exchange, forex cards, international remittances, and allied services like insurance and demat services in Chennai." />
   <title>Scope Forex Pvt. Ltd.</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p0zPRAx3tQom7ZBEB/9q7eUmDywP7+O3BtF6gO5K5V4T5vlfc5EOeY+3Mo3FcY2nhY9zwRYPbmuGZsvrb32F9w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
       color: #333;
     }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+
     header {
-      background: #012a4a;
+      background-color: #002147;
       color: #fff;
-      padding: 20px 0;
+      padding: 20px;
+      text-align: center;
     }
+
     nav {
+      background: #003366;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      padding: 0;
-    }
-    nav ul li a {
-      color: #fff;
+
+    nav a {
+      color: white;
       text-decoration: none;
+      font-weight: bold;
     }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1565373679059-35a1c62b4c0a') no-repeat center center/cover;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
     }
-    .services, .about, .why-choose-us, .faq, .contact, .map {
-      padding: 60px 20px;
+
+    .features, .why-choose-us, .faq {
+      display: grid;
+      gap: 20px;
     }
-    .footer {
-      background: #012a4a;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
+
     .floating-buttons {
       position: fixed;
       bottom: 20px;
@@ -64,97 +54,109 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      z-index: 999;
     }
+
     .floating-buttons a {
-      background: #25d366;
-      color: white;
+      display: inline-block;
+      background-color: #28a745;
+      color: #fff;
       padding: 12px;
       border-radius: 50%;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
       font-size: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    .trust-badge {
+
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 20px;
       text-align: center;
-      padding: 30px 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    @media (min-width: 768px) {
+      .features, .why-choose-us, .faq {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
+
 <body>
-  <header class="container">
-    <nav>
-      <h1>Scope Forex Pvt. Ltd.</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header>
+    <h1>Scope Forex Pvt. Ltd.</h1>
+    <p>RBI Licensed Currency Exchange & Remittance Service Provider</p>
   </header>
 
-  <section class="hero" id="home">
-    <h2>Your Trusted Forex Partner</h2>
-    <p>Currency Exchange • Remittance • Forex Cards • Insurance • Demat</p>
-  </section>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#why">Why Choose Us</a>
+    <a href="#faq">FAQs</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section class="services container" id="services">
+  <section id="services">
     <h2>Our Services</h2>
-    <ul>
-      <li>Buy & Sell Foreign Currency</li>
-      <li>Remittance Services (Wire Transfer, Western Union, MoneyGram, RIA)</li>
-      <li>Issue Forex Cards</li>
-      <li>Demat & Trading Services (Angel Broking Partner)</li>
-      <li>Insurance Services (Star Health Partner)</li>
-    </ul>
+    <div class="features">
+      <div>✔️ Foreign Currency Exchange</div>
+      <div>✔️ Forex Card Issuance</div>
+      <div>✔️ Remittances Worldwide</div>
+      <div>✔️ Western Union, Moneygram, Ria Transfers</div>
+      <div>✔️ Demat Account (Angel Broking Partner)</div>
+      <div>✔️ Insurance Services (Star Health Partner)</div>
+    </div>
   </section>
 
-  <section class="about container" id="about">
-    <h2>About Us</h2>
-    <p>Scope Forex Pvt. Ltd. is an RBI licensed entity with 10+ years of trust and service. Our professional team ensures fast and reliable foreign exchange, remittance, investment, and insurance solutions.</p>
-  </section>
-
-  <section class="why-choose-us container">
+  <section id="why">
     <h2>Why Choose Us</h2>
-    <ul>
-      <li>RBI Licensed & Trusted Brand</li>
-      <li>Best Exchange Rates</li>
-      <li>Fast & Transparent Process</li>
-      <li>Multiple Trusted Partnerships</li>
-    </ul>
+    <div class="why-choose-us">
+      <div>✅ RBI Licensed & 10+ Years Experience</div>
+      <div>✅ Competitive Exchange Rates</div>
+      <div>✅ Trusted Global Partners</div>
+      <div>✅ Fast & Transparent Process</div>
+    </div>
   </section>
 
-  <section class="trust-badge">
-    <img src="https://www.trustbadge.com/assets/trustbadge.svg" alt="Trusted by 1000+ Customers" width="150" />
-    <p>Trusted by thousands of happy customers</p>
+  <section id="faq">
+    <h2>FAQs</h2>
+    <div class="faq">
+      <div><strong>How do I get a forex card?</strong><br>Visit our office or call us to apply instantly.</div>
+      <div><strong>Can I send money abroad?</strong><br>Yes. We offer remittance services to 100+ countries.</div>
+      <div><strong>Do you offer insurance?</strong><br>Yes. We are a partner of Star Health Insurance.</div>
+      <div><strong>Can I trade in stocks?</strong><br>Yes. We partner with Angel Broking to provide demat accounts.</div>
+    </div>
   </section>
 
-  <section class="faq container">
-    <h2>FAQ</h2>
-    <p><strong>Q: Do I need ID to exchange currency?</strong><br/>A: Yes, valid government ID is required for transactions.</p>
-    <p><strong>Q: Can I send money abroad through you?</strong><br/>A: Yes, we support outward remittance via RBI compliant channels.</p>
-  </section>
-
-  <section class="map container">
-    <h2>Visit Us</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15560.30714635753!2d80.10933955!3d13.07737285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261a9f1b3e7c7%3A0xc5f42975816760e0!2sScope%20Forex!5e0!3m2!1sen!2sin!4v1690282843180!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
-
-  <section class="contact container" id="contact">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>ADDRESS:</strong> Western Union - Scope Forex Pvt. Ltd.<br/>Door No.91, Shop No.14 & 14A, Balamurali Theatre Complex, Poonamallee High Road, Chennai, Tamil Nadu, 600107</p>
-    <p><strong>Phone:</strong> <a href="tel:9381111767">9381111767</a></p>
-    <p><strong>Mail:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919381111767">9381111767</a></p>
+    <p><strong>Address:</strong><br>
+      Western Union - Scope Forex Pvt. Ltd.<br>
+      Door No.91, Shop No.14 & 14A,<br>
+      Balamurali Theatre Complex,<br>
+      Poonamallee High Road,<br>
+      Chennai, Tamil Nadu - 600107</p>
+    <p><strong>Phone:</strong> <a href="tel:+919381111767">9381111767</a></p>
+    <p><strong>Email:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919381111767">Chat with us</a></p>
+    <iframe src="https://www.google.com/maps?q=13.0846223,80.1575469&z=17&output=embed"></iframe>
   </section>
 
   <div class="floating-buttons">
-    <a href="tel:9381111767" title="Call Now"><i class="fas fa-phone"></i></a>
-    <a href="https://wa.me/919381111767" title="Chat on WhatsApp" style="background-color: #25D366;"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919381111767" title="Call Us">📞</a>
+    <a href="https://wa.me/919381111767" title="WhatsApp">💬</a>
   </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Scope Forex Pvt. Ltd. All rights reserved.</p>
+  <footer>
+    <p>© 2025 Scope Forex Pvt. Ltd. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
