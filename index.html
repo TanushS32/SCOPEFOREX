@@ -2,195 +2,143 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SCOPE FOREX PVT. LTD. is an RBI Licensed Forex Dealer in Chennai offering Foreign Currency Exchange, Forex Cards, Remittances, Western Union, MoneyGram, RIA, Demat and Insurance Services." />
-  <meta name="keywords" content="Forex Chennai, Western Union Chennai, Currency Exchange, Forex Card, Money Transfer, Demat Account, Insurance" />
-  <meta name="author" content="SCOPE FOREX PVT. LTD." />
-  <title>SCOPE FOREX PVT. LTD.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RBI Licensed Forex Dealer in Chennai - Currency Exchange, Forex Cards, Remittance, Western Union & Demat Services.">
+  <meta name="keywords" content="forex, currency exchange, western union, remittance, forex card, demat, angel broking, star health, scope forex">
+  <meta name="author" content="Scope Forex Pvt. Ltd.">
+  <title>Scope Forex Pvt. Ltd.</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
     }
-
     header, footer {
-      background-color: #00264d;
+      background: #003366;
       color: white;
-      padding: 1em 0;
+      padding: 20px 10px;
       text-align: center;
     }
-
     nav {
+      background: #00509E;
+      padding: 10px;
       display: flex;
       justify-content: center;
-      gap: 1em;
-      background-color: #003366;
-      padding: 0.75em;
-      flex-wrap: wrap;
+      gap: 15px;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-
-    nav a:hover {
-      text-decoration: underline;
+    section {
+      padding: 20px;
     }
-
-    .section {
-      padding: 2em;
+    .features, .faq {
+      display: grid;
+      gap: 20px;
       max-width: 1000px;
       margin: auto;
     }
-
-    .services img {
+    iframe {
       max-width: 100%;
-      border-radius: 10px;
+      border: none;
     }
-
-    .contact, .why-choose-us {
-      background-color: white;
-      padding: 1em;
-      border-radius: 10px;
-      margin-bottom: 2em;
-    }
-
-    .footer-columns {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      text-align: left;
-    }
-
-    .footer-columns div {
-      flex: 1;
-      padding: 1em;
-      min-width: 200px;
-    }
-
-    .floating-btn {
+    .floating-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 999;
+      z-index: 1000;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-
-    .floating-btn a {
-      background-color: #28a745;
+    .floating-button a {
+      background: #25D366;
       color: white;
       padding: 10px 15px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    .trust-badge {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: #ffc107;
-      padding: 10px;
-      border-radius: 5px;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .footer-columns {
-        flex-direction: column;
-      }
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>SCOPE FOREX PVT. LTD.</h1>
-    <p>RBI Licensed Forex Dealer - Chennai</p>
+    <h1>Scope Forex Pvt. Ltd.</h1>
+    <p>RBI Licensed Forex Dealer in Chennai</p>
   </header>
 
   <nav>
     <a href="#services">Services</a>
     <a href="#why">Why Choose Us</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="section services" id="services">
+  <section id="services">
     <h2>Our Services</h2>
     <ul>
-      <li>Foreign Currency Exchange (Buy & Sell)</li>
-      <li>Forex Cards for Travel</li>
-      <li>International Remittances (Wire Transfer)</li>
-      <li>Western Union, MoneyGram, RIA Money Transfer</li>
-      <li>Demat Services (Channel Partner: Angel Broking)</li>
-      <li>Insurance Services (Star Health Insurance Partner)</li>
+      <li>Purchase and sale of foreign currency notes</li>
+      <li>Forex cards for tourists and business travel</li>
+      <li>Remittance services to foreign countries</li>
+      <li>Western Union, MoneyGram, and RIA money transfer</li>
+      <li>Demat services - Channel partner with Angel Broking</li>
+      <li>Insurance services - Partnered with Star Health</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="section why-choose-us" id="why">
+  <section id="why">
     <h2>Why Choose Us</h2>
-    <ul>
-      <li>10+ Years of Trusted Service</li>
-      <li>RBI Authorized Forex Dealer</li>
-      <li>Fast and Hassle-Free Transactions</li>
-      <li>Partnerships with Leading Financial Institutions</li>
-      <li>Friendly and Supportive Customer Service</li>
-      <li>Prime Location in Chennai</li>
-    </ul>
-  </div>
+    <div class="features">
+      <div>✔ RBI Licensed Dealer</div>
+      <div>✔ 10+ Years of Trusted Service</div>
+      <div>✔ Quick & Transparent Transactions</div>
+      <div>✔ One-stop Shop for Forex, Demat & Insurance</div>
+    </div>
+  </section>
 
-  <div class="section contact" id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> SCOPE FOREX PVT. LTD., Shop No.14 & 14A, Balamurali Theatre Complex, Door No.91, Poonamallee High Road, Chennai, Tamil Nadu 600107</p>
-    <p><strong>Phone:</strong> <a href="tel:+919381111767">9381111767</a></p>
-    <p><strong>Email:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919381111767">Click to Chat</a></p>
-    <p><a href="https://maps.app.goo.gl/9rYudGcdHHxDCPe3A" target="_blank">📍 View on Google Maps</a></p>
-  </div>
-
-  <footer>
-    <div class="footer-columns">
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
       <div>
-        <h3>Company</h3>
-        <p>SCOPE FOREX PVT. LTD.</p>
-        <p>RBI Licensed Dealer</p>
+        <strong>Do I need ID proof to exchange currency?</strong>
+        <p>Yes, a valid government-issued photo ID such as Aadhaar or passport is required.</p>
       </div>
       <div>
-        <h3>Quick Links</h3>
-        <p><a href="#services">Services</a></p>
-        <p><a href="#contact">Contact</a></p>
+        <strong>How long does a money transfer take?</strong>
+        <p>International transfers via Western Union, MoneyGram, and RIA are typically instant or within hours.</p>
       </div>
       <div>
-        <h3>Connect</h3>
-        <p>Email: scopeforex@yahoo.com</p>
-        <p>Phone: 9381111767</p>
+        <strong>Can I book currency rates in advance?</strong>
+        <p>Yes, we allow rate bookings based on availability. Please call us for current offers.</p>
       </div>
     </div>
-    <p>&copy; 2025 SCOPE FOREX PVT. LTD. All rights reserved.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>ADDRESS:</strong> Western Union - Scope Forex Pvt. Ltd.<br>
+      Door No.91, Shop No.14 & 14A, Balamurali Theatre Complex,<br>
+      Poonamallee High Road, Chennai, Tamil Nadu, 600107</p>
+    <p><strong>Phone:</strong> <a href="tel:+919381111767">9381111767</a></p>
+    <p><strong>Email:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919381111767">Chat on WhatsApp</a></p>
+    <iframe src="https://www.google.com/maps?q=13.08784,80.16075&z=15&output=embed" width="100%" height="300" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Scope Forex Pvt. Ltd. All rights reserved.</p>
   </footer>
 
-  <div class="floating-btn">
-    <a href="tel:+919381111767">📞 Call Us</a>
-    <a href="https://wa.me/919381111767">💬 WhatsApp</a>
-  </div>
-
-  <div class="trust-badge">
-    ✅ RBI Licensed
+  <div class="floating-button">
+    <a href="tel:+919381111767">Call Us</a>
+    <a href="https://wa.me/919381111767">WhatsApp</a>
   </div>
 </body>
-
 </html>
