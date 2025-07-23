@@ -1,214 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Scope Forex Pvt. Ltd. - RBI Licensed Forex Dealer in Chennai providing currency exchange, forex cards, international remittance, demat services, and insurance." />
   <title>Scope Forex Pvt. Ltd.</title>
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/684/684908.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
     body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
     }
-
     header {
-      background-color: #004aad;
-      padding: 20px 0;
+      background: #003366;
       color: white;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav ul {
-      list-style: none;
+      padding: 20px 40px;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    nav ul li a {
+    nav a {
       color: white;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
-
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1');
-      background-size: cover;
-      background-position: center;
-      height: 80vh;
+      background: url('https://images.unsplash.com/photo-1561414927-6d86591d0c4f?auto=format&fit=crop&w=1050&q=80') no-repeat center center/cover;
+      height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
       text-align: center;
-      padding: 20px;
     }
-
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 3em;
     }
-
     .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      font-size: 1.2em;
+      margin-top: 10px;
     }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
-      background-color: #fff;
-    }
-
-    .service {
-      background-color: #e6f0ff;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .service img {
-      height: 50px;
-      margin-bottom: 10px;
-    }
-
-    .contact {
-      padding: 40px;
-      background-color: #f0f0f0;
-    }
-
-    .contact iframe {
-      width: 100%;
-      height: 300px;
+    .btn {
+      background: #ffcc00;
+      color: #003366;
+      padding: 12px 25px;
       border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
       margin-top: 20px;
     }
-
-    footer {
-      background-color: #004aad;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .section {
+      padding: 60px 40px;
     }
-
-    .floating-buttons {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
+    .services {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
-
-    .floating-buttons a {
+    .service {
+      flex: 1 1 250px;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+    .service img {
+      height: 80px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+    footer {
+      background: #001f3f;
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    footer div {
+      flex: 1 1 250px;
+      margin: 10px;
+    }
+    .footer-heading {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .contact-section {
+      background: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+    }
+    .floating-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 100px;
+      z-index: 1000;
+    }
+    .floating-btn a {
+      display: block;
       background-color: #25D366;
       color: white;
-      padding: 10px 15px;
+      padding: 10px 20px;
       border-radius: 50px;
+      margin: 10px 0;
       text-decoration: none;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      font-weight: bold;
     }
-
-    .floating-buttons a.call {
-      background-color: #004aad;
+    .call-btn {
+      background-color: #007BFF;
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>Scope Forex Pvt. Ltd.</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Your Trusted RBI Licensed Forex Dealer</h1>
-    <p>Foreign currency exchange, remittances, forex cards, demat and insurance services—all under one roof.</p>
-  </section>
+<header>
+  <h2>Scope Forex Pvt. Ltd.</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+  </nav>
+</header>
 
-  <section class="services" id="services">
+<section class="hero">
+  <h1>Reliable Forex and Financial Services</h1>
+  <p>Licensed by RBI | Trusted Partners | 10+ Years of Excellence</p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</section>
+
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="services">
     <div class="service">
-      <img src="https://cdn-icons-png.flaticon.com/512/1034/1034149.png" alt="Currency Exchange">
+      <img src="https://cdn-icons-png.flaticon.com/512/2721/2721320.png" alt="Currency Exchange">
       <h3>Currency Exchange</h3>
-      <p>Buy and sell major foreign currencies at competitive rates.</p>
+      <p>Buy & Sell Foreign Currency Notes</p>
     </div>
     <div class="service">
-      <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Remittance">
-      <h3>Remittances</h3>
-      <p>Send money abroad via wire transfer with ease and security.</p>
-    </div>
-    <div class="service">
-      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Forex Cards">
+      <img src="https://cdn-icons-png.flaticon.com/512/2544/2544023.png" alt="Forex Cards">
       <h3>Forex Cards</h3>
-      <p>Multi-currency forex cards for travel and business use.</p>
+      <p>Multi-currency Forex Cards for Travel</p>
     </div>
     <div class="service">
-      <img src="https://cdn-icons-png.flaticon.com/512/2811/2811790.png" alt="Demat">
-      <h3>Demat & Trading</h3>
-      <p>Channel partner with Angel Broking for all demat needs.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/2475/2475703.png" alt="Remittances">
+      <h3>International Remittances</h3>
+      <p>Send Money Abroad with Ease</p>
     </div>
     <div class="service">
-      <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Insurance">
-      <h3>Insurance</h3>
-      <p>Health insurance policies from Star Health Insurance.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/3149/3149791.png" alt="Western Union">
+      <h3>Western Union / Moneygram / RIA</h3>
+      <p>Receive International Money Instantly</p>
     </div>
     <div class="service">
-      <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Money Transfer">
-      <h3>Western Union & More</h3>
-      <p>Receive money via Western Union, MoneyGram, and RIA.</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Demat">
+      <h3>Demat Services</h3>
+      <p>Partnered with Angel Broking</p>
     </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong><br />
-      Western Union - Scope Forex Pvt. Ltd.<br />
-      Door No.91, Shop No.14 & 14A,<br />
-      Balamurali Theatre Complex,<br />
-      Poonamallee High Road,<br />
-      Chennai, Tamil Nadu - 600107</p>
-    <p><strong>Phone:</strong> <a href="tel:+919381111767">+91 93811 11767</a><br />
-      <strong>Email:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a><br />
-      <strong>WhatsApp:</strong> <a href="https://wa.me/919381111767">+91 93811 11767</a>
-    </p>
-    <iframe src="https://www.google.com/maps?q=13.082299,80.179259&hl=en&z=16&amp;output=embed"></iframe>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Scope Forex Pvt. Ltd. | RBI Licensed Forex Dealer</p>
-  </footer>
-
-  <div class="floating-buttons">
-    <a href="tel:+919381111767" class="call">📞 Call</a>
-    <a href="https://wa.me/919381111767">💬 WhatsApp</a>
+    <div class="service">
+      <img src="https://cdn-icons-png.flaticon.com/512/535/535285.png" alt="Insurance">
+      <h3>Insurance Services</h3>
+      <p>Partnered with Star Health Insurance</p>
+    </div>
   </div>
-</body>
+</section>
 
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <p><strong>ADDRESS:</strong> WESTERN UNION - SCOPE FOREX PVT. LTD.<br>
+  DOOR NO.91, SHOP NO.14 & 14A, BALAMURALI THEATRE COMPLEX, POONAMALLEE HIGH ROAD, Chennai, Chennai, Tamil Nadu, 600107</p>
+  <p><strong>PH.NO:</strong> <a href="tel:9381111767">9381111767</a></p>
+  <p><strong>MAIL ID:</strong> <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
+  <p><strong>WhatsApp:</strong> <a href="https://wa.me/919381111767">9381111767</a></p>
+</section>
+
+<section id="location">
+  <iframe src="https://www.google.com/maps?q=13.0787856,80.1683602&hl=en&z=17&output=embed" allowfullscreen></iframe>
+</section>
+
+<footer>
+  <div>
+    <div class="footer-heading">About</div>
+    <p>We are an RBI licensed Forex dealer offering currency exchange, remittance, forex card, demat & insurance services under trusted partnerships.</p>
+  </div>
+  <div>
+    <div class="footer-heading">Quick Links</div>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#location">Location</a>
+    </div>
+  </div>
+  <div>
+    <div class="footer-heading">Contact</div>
+    <p>Phone: <a href="tel:9381111767">9381111767</a></p>
+    <p>Email: <a href="mailto:scopeforex@yahoo.com">scopeforex@yahoo.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/919381111767">Chat Now</a></p>
+  </div>
+</footer>
+
+<div class="floating-btn">
+  <a href="tel:9381111767" class="call-btn">📞 Call Us</a>
+  <a href="https://wa.me/919381111767">💬 WhatsApp</a>
+</div>
+
+</body>
 </html>
