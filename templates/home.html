@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Scope Forex Pvt. Ltd.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 px-6 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Scope Forex Pvt. Ltd.</h1>
+  <p class="text-lg md:text-xl mb-6">Your Trusted Partner for Foreign Exchange & Financial Services</p>
+  <a href="#services" class="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full shadow-md hover:bg-yellow-300 transition">Explore Services</a>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 px-6 bg-gray-100">
+  <h2 class="text-3xl font-bold text-center mb-10">Our Core Services</h2>
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Foreign Currency Exchange</h3>
+      <p>Buy or sell foreign currencies with competitive rates and full RBI compliance.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Forex Cards</h3>
+      <p>Prepaid international travel cards for students, travellers, and business users.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Wire Transfer Remittances</h3>
+      <p>Send money abroad quickly and securely via RBI-authorized channels.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Travel Insurance</h3>
+      <p>Protect your international travel with top-tier insurance coverage.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Receive Money</h3>
+      <p>Get funds via Western Union, MoneyGram, and RIA with full documentation support.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold mb-2">Other Financial Services</h3>
+      <p>Health insurance (Star Health), mutual funds, and demat accounts via trusted partners.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Partners Section -->
+<section class="py-16 px-6 bg-white">
+  <h2 class="text-3xl font-bold text-center mb-10">Trusted Partners</h2>
+  <div class="flex flex-wrap justify-center items-center gap-10 max-w-5xl mx-auto">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/RBL_Bank_Logo.svg/2560px-RBL_Bank_Logo.svg.png" alt="RBL Bank" class="h-12">
+    <img src="https://1000logos.net/wp-content/uploads/2021/04/Western-Union-logo.png" alt="Western Union" class="h-12">
+    <img src="https://seeklogo.com/images/M/MoneyGram-logo-0C66B07A8A-seeklogo.com.png" alt="MoneyGram" class="h-12">
+    <img src="https://www.riamoneytransfer.com/themes/custom/riamoney/assets/images/riamoney-logo.svg" alt="RIA" class="h-10">
+    <img src="https://companieslogo.com/img/orig/ICICIPRULI.NS-3d78f558.png?t=1614234532" alt="ICICI Prudential" class="h-12">
+    <img src="https://assets.angelone.in/images/logo-black.svg" alt="Angel Broking" class="h-10">
+    <img src="https://www.starhealth.in/static/media/star-health-logo.20210407160913.svg" alt="Star Health" class="h-10">
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="bg-gray-100 py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Why Choose Scope Forex?</h2>
+  <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
+    <div>
+      <div class="text-4xl text-blue-800 mb-2">✅</div>
+      <p>Licensed by RBI</p>
+    </div>
+    <div>
+      <div class="text-4xl text-blue-800 mb-2">🚀</div>
+      <p>Fast & Secure Services</p>
+    </div>
+    <div>
+      <div class="text-4xl text-blue-800 mb-2">🤝</div>
+      <p>Trusted Partners</p>
+    </div>
+    <div>
+      <div class="text-4xl text-blue-800 mb-2">🌎</div>
+      <p>Wide Global Coverage</p>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Contact -->
+<section class="py-12 px-6 bg-blue-900 text-white text-center">
+  <h2 class="text-2xl font-bold mb-4">Need Assistance?</h2>
+  <p class="mb-6">Reach out to us on WhatsApp or through our contact page.</p>
+  <a href="{{ url_for('contact') }}" class="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full shadow-md hover:bg-yellow-300 transition">Contact Us</a>
+</section>
+
+{% endblock %}
