@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Forex Services | Scope Forex Pvt. Ltd.</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="font-sans bg-white text-gray-800">
+{% extends "base.html" %}
+
+{% block title %}Home | Scope Forex Pvt. Ltd.{% endblock %}
+
+{% block content %}
 
   <!-- Header Banner -->
   <section class="bg-blue-900 text-white py-16 px-6 text-center">
@@ -66,9 +62,4 @@
     <a href="contact.html" class="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full shadow hover:bg-yellow-300 transition">Contact Us</a>
   </section>
 
-  <!-- WhatsApp & Footer Includes -->
-  <!--#include virtual="whatsapp.html" -->
-  <!--#include virtual="footer.html" -->
-
-</body>
-</html>
+  {% endblock %}
