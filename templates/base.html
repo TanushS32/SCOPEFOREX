@@ -54,6 +54,41 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXX');
   </script>
+  <script>
+  function toggleFAQ(id) {
+    const faqItem = document.getElementById(id);
+    const button = faqItem?.previousElementSibling;
+
+    if (faqItem.classList.contains('hidden')) {
+      faqItem.classList.remove('hidden');
+      faqItem.classList.add('mt-2', 'transition-all', 'duration-300');
+      button.querySelector('span').textContent = '−';
+      button.setAttribute('aria-expanded', 'true');
+    } else {
+      faqItem.classList.add('hidden');
+      faqItem.classList.remove('transition-all');
+      button.querySelector('span').textContent = '+';
+      button.setAttribute('aria-expanded', 'false');
+    }
+  }
+</script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('max-h-0')) {
+      mobileMenu.classList.remove('max-h-0');
+      mobileMenu.classList.add('max-h-96');
+    } else {
+      mobileMenu.classList.add('max-h-0');
+      mobileMenu.classList.remove('max-h-96');
+    }
+  });
+</script>
+
+
 
 </body>
 </html>
