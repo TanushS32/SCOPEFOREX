@@ -12,19 +12,19 @@
     <h1 class="text-3xl font-bold mb-3">Welcome to Scope Forex</h1>
     <p class="text-sm mb-4">RBI-Licensed partner for currency, cards & remittances</p>
     <div class="grid grid-cols-2 gap-3 text-sm">
-      <a href="{{ url_for('home') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">🏠 Home</a>
-      <a href="{{ url_for('forex_services') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">💱 Forex</a>
-      <a href="{{ url_for('financial_services') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">📊 Finance</a>
-      <a href="{{ url_for('faqs') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">❓ FAQ</a>
-      <a href="{{ url_for('contact') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">📞 Contact</a>
-      <a href="https://wa.me/919381111767" class="bg-green-500 text-white py-2 rounded-xl shadow text-center">💬 WhatsApp</a>
+      <a href="{{ url_for('home') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center hover:bg-gray-100 transition" aria-label="Home">🏠 Home</a>
+      <a href="{{ url_for('forex_services') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center hover:bg-gray-100 transition" aria-label="Forex Services">💱 Forex</a>
+      <a href="{{ url_for('financial_services') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center hover:bg-gray-100 transition" aria-label="Financial Services">📊 Finance</a>
+      <a href="{{ url_for('faqs') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center hover:bg-gray-100 transition" aria-label="FAQs">❓ FAQ</a>
+      <a href="{{ url_for('contact') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center hover:bg-gray-100 transition" aria-label="Contact Us">📞 Contact</a>
+      <a href="https://wa.me/919381111767" class="bg-green-500 text-white py-2 rounded-xl shadow text-center hover:bg-green-600 transition" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬 WhatsApp</a>
     </div>
   </section>
 
   <!-- Horizontally Scrollable Services -->
   <section id="mobile-services" class="py-10 px-4 bg-gray-100">
-    <h2 class="text-xl font-bold mb-4">Services</h2>
-    <div class="flex overflow-x-auto space-x-4 pb-2">
+    <h2 class="text-xl font-bold mb-4">Our Services</h2>
+    <div class="flex overflow-x-auto space-x-4 pb-2 scroll-smooth">
       {% set services = [
         ("💱", "Currency Exchange"),
         ("💳", "Forex Cards"),
@@ -34,8 +34,8 @@
         ("📊", "Investments")
       ] %}
       {% for icon, label in services %}
-      <div class="min-w-[140px] bg-white p-4 rounded-xl shadow text-center">
-        <div class="text-3xl mb-2">{{ icon }}</div>
+      <div class="min-w-[140px] bg-white p-4 rounded-xl shadow text-center hover:shadow-md transition">
+        <div class="text-3xl mb-2" aria-hidden="true">{{ icon }}</div>
         <div class="text-sm font-medium">{{ label }}</div>
       </div>
       {% endfor %}
@@ -44,36 +44,37 @@
 
   <!-- Mobile About Card -->
   <section class="px-4 py-8 bg-white">
-    <div class="bg-blue-50 rounded-xl p-4 shadow">
+    <div class="bg-blue-50 rounded-xl p-4 shadow-sm">
       <h3 class="text-lg font-semibold mb-2">Who We Are</h3>
-      <p class="text-sm text-gray-700">RBI-authorized Forex company offering foreign currency, remittances, insurance & investment support with trusted partners.</p>
+      <p class="text-sm text-gray-700 leading-relaxed">
+        Scope Forex Pvt. Ltd. is an RBI-authorized company offering reliable foreign exchange services, remittances, travel insurance, and investment support in partnership with trusted brands.
+      </p>
     </div>
   </section>
 
   <!-- Compact Partner Logos -->
   <section class="bg-gray-100 px-4 py-10">
-    <h3 class="text-xl font-bold text-center mb-6">Partners</h3>
+    <h3 class="text-xl font-bold text-center mb-6">Our Trusted Partners</h3>
     <div class="grid grid-cols-3 gap-4 items-center justify-items-center">
-      <img src="{{ url_for('static', filename='images/rbl-bank.png') }}" alt="RBL" class="h-10" />
-      <img src="{{ url_for('static', filename='images/westernunion.jpg') }}" alt="WU" class="h-10" />
-      <img src="{{ url_for('static', filename='images/moneygram.png') }}" alt="MG" class="h-10" />
-      <img src="{{ url_for('static', filename='images/ria.png') }}" alt="RIA" class="h-10" />
-      <img src="{{ url_for('static', filename='images/iciciprudential.png') }}" alt="ICICI" class="h-10" />
-      <img src="{{ url_for('static', filename='images/angelone.webp') }}" alt="Angel" class="h-10" />
+      <img src="{{ url_for('static', filename='images/rbl-bank.png') }}" alt="RBL Bank Logo" class="h-10" loading="lazy" />
+      <img src="{{ url_for('static', filename='images/westernunion.jpg') }}" alt="Western Union Logo" class="h-10" loading="lazy" />
+      <img src="{{ url_for('static', filename='images/moneygram.png') }}" alt="MoneyGram Logo" class="h-10" loading="lazy" />
+      <img src="{{ url_for('static', filename='images/ria.png') }}" alt="RIA Money Transfer Logo" class="h-10" loading="lazy" />
+      <img src="{{ url_for('static', filename='images/iciciprudential.png') }}" alt="ICICI Prudential Logo" class="h-10" loading="lazy" />
+      <img src="{{ url_for('static', filename='images/angelone.webp') }}" alt="Angel One Logo" class="h-10" loading="lazy" />
     </div>
   </section>
 
-  <!-- Values List -->
+  <!-- Why Choose Us -->
   <section class="px-4 py-10 bg-white">
-    <h3 class="text-xl font-bold mb-4">Why Scope Forex?</h3>
-    <ul class="space-y-3 text-sm">
-      <li class="flex items-center gap-2"><span class="text-blue-700">✅</span> RBI Licensed</li>
-      <li class="flex items-center gap-2"><span class="text-blue-700">🔒</span> Safe Transactions</li>
-      <li class="flex items-center gap-2"><span class="text-blue-700">🌍</span> Global Coverage</li>
-      <li class="flex items-center gap-2"><span class="text-blue-700">🤝</span> Trusted Brands</li>
+    <h3 class="text-xl font-bold mb-4">Why Choose Scope Forex?</h3>
+    <ul class="space-y-3 text-sm text-gray-800">
+      <li class="flex items-center gap-2"><span class="text-blue-700">✅</span> RBI Licensed & Regulated</li>
+      <li class="flex items-center gap-2"><span class="text-blue-700">🔒</span> Safe & Transparent Transactions</li>
+      <li class="flex items-center gap-2"><span class="text-blue-700">🌍</span> Wide Global Coverage</li>
+      <li class="flex items-center gap-2"><span class="text-blue-700">🤝</span> Partnerships with Top Brands</li>
     </ul>
   </section>
-
 </div>
 
 <!-- 💻 Desktop Layout -->
@@ -81,10 +82,16 @@
   {% include "desktop_home.html" %}
 </div>
 
-<!-- Sticky CTA for Mobile -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 bg-blue-900 text-white flex justify-around items-center h-14 z-50">
-  <a href="tel:+919381111767" class="flex items-center gap-1 text-sm"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.43 2.43z" /></svg> Call</a>
-  <a href="https://wa.me/919381111767" class="flex items-center gap-1 text-sm"><img src="{{ url_for('static', filename='images/whatsapp-logo.svg') }}" alt="WhatsApp" class="h-5 w-5" /> Chat</a>
+<!-- 📞 Sticky Mobile CTA -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-blue-900 text-white flex justify-around items-center h-14 z-50 shadow-inner">
+  <a href="tel:+919381111767" class="flex items-center gap-1 text-sm hover:text-blue-300 transition" aria-label="Call Scope Forex">
+    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.43 2.43z" /></svg>
+    Call
+  </a>
+  <a href="https://wa.me/919381111767" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-sm hover:text-green-300 transition" aria-label="Chat on WhatsApp">
+    <img src="{{ url_for('static', filename='images/whatsapp-logo.svg') }}" alt="WhatsApp Icon" class="h-5 w-5" />
+    Chat
+  </a>
 </div>
 
 {% endblock %}
