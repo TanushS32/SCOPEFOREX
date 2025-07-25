@@ -4,96 +4,87 @@
 
 {% block content %}
 
-<!-- Hero Section -->
-<section class="relative bg-blue-900 text-white py-24 px-6 text-center overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Forex Background"
-       class="absolute inset-0 w-full h-full object-cover opacity-20 z-0" />
-  <div class="relative z-10">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4">Scope Forex Pvt. Ltd.</h1>
-    <p class="text-xl md:text-2xl mb-6">Your Trusted Partner for Foreign Exchange & Financial Services</p>
-    <a href="#services" class="inline-block bg-yellow-400 text-black font-semibold py-3 px-8 rounded-full shadow hover:bg-yellow-300 transition">Explore Services</a>
-    <div class="mt-8 animate-bounce text-white text-xl">↓</div>
-  </div>
-</section>
+<!-- 📱 Mobile Layout -->
+<div class="block md:hidden">
 
-<!-- Core Services -->
-<section id="services" class="py-20 px-6 bg-gray-100">
-  <h2 class="text-3xl font-bold text-center mb-12">Our Core Services</h2>
-  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    {% set services = [
-      ("Foreign Currency Exchange", "Buy/sell 40+ currencies at RBI-compliant rates.", "globe"),
-      ("Forex Cards", "Load multi-currency cards for safe global travel.", "credit-card"),
-      ("Wire Transfer Remittances", "Send money abroad securely under RBI LRS.", "send"),
-      ("Travel Insurance", "Protect your journey with international coverage.", "shield"),
-      ("Receive Money", "Collect funds via Western Union, MoneyGram, RIA.", "download"),
-      ("Other Financial Services", "Health, demat & mutual funds via trusted partners.", "briefcase")
-    ] %}
-    {% for title, desc, icon in services %}
-    <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
-      <div class="mb-4 text-blue-800">
-        <i data-lucide="{{ icon }}" class="w-8 h-8"></i>
+  <!-- Mobile Hero Section -->
+  <section class="bg-blue-900 text-white py-12 px-4 text-center">
+    <h1 class="text-3xl font-bold mb-3">Welcome to Scope Forex</h1>
+    <p class="text-sm mb-4">RBI-Licensed partner for currency, cards & remittances</p>
+    <div class="grid grid-cols-2 gap-3 text-sm">
+      <a href="{{ url_for('home') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">🏠 Home</a>
+      <a href="{{ url_for('forex_services') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">💱 Forex</a>
+      <a href="{{ url_for('financial_services') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">📊 Finance</a>
+      <a href="{{ url_for('faqs') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">❓ FAQ</a>
+      <a href="{{ url_for('contact') }}" class="bg-white py-2 rounded-xl shadow text-blue-900 text-center">📞 Contact</a>
+      <a href="https://wa.me/919381111767" class="bg-green-500 text-white py-2 rounded-xl shadow text-center">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Horizontally Scrollable Services -->
+  <section id="mobile-services" class="py-10 px-4 bg-gray-100">
+    <h2 class="text-xl font-bold mb-4">Services</h2>
+    <div class="flex overflow-x-auto space-x-4 pb-2">
+      {% set services = [
+        ("💱", "Currency Exchange"),
+        ("💳", "Forex Cards"),
+        ("📤", "Wire Transfers"),
+        ("🛡️", "Travel Insurance"),
+        ("💰", "Receive Money"),
+        ("📊", "Investments")
+      ] %}
+      {% for icon, label in services %}
+      <div class="min-w-[140px] bg-white p-4 rounded-xl shadow text-center">
+        <div class="text-3xl mb-2">{{ icon }}</div>
+        <div class="text-sm font-medium">{{ label }}</div>
       </div>
-      <h3 class="text-xl font-semibold mb-2">{{ title }}</h3>
-      <p class="text-sm text-gray-600">{{ desc }}</p>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-</section>
+  </section>
 
-<!-- Company Overview -->
-<section class="py-16 px-6 bg-white">
-  <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl font-bold mb-4">Who We Are</h2>
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Scope Forex Pvt. Ltd. is an RBI-licensed financial services provider based in India, delivering trusted foreign exchange, prepaid cards, remittances, and allied services with complete transparency and compliance.
-    </p>
-  </div>
-</section>
-
-<!-- Trusted Partners -->
-<section class="py-16 px-6 bg-gray-100">
-  <h2 class="text-2xl font-bold text-center mb-10">Our Trusted Partners</h2>
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center justify-items-center max-w-5xl mx-auto">
-    <img src="{{ url_for('static', filename='images/rbl-bank.png') }}" alt="RBL Bank Logo" class="h-12 grayscale hover:grayscale-0 transition" />
-    <img src="{{ url_for('static', filename='images/westernunion.jpg') }}" alt="Western Union" class="h-24 grayscale hover:grayscale-0 transition" />
-    <img src="{{ url_for('static', filename='images/moneygram.png') }}" alt="MoneyGram" class="h-12 grayscale hover:grayscale-0 transition" />
-    <img src="{{ url_for('static', filename='images/ria.png') }}" alt="RIA" class="h-12 grayscale hover:grayscale-0 transition" />
-    <img src="{{ url_for('static', filename='images/iciciprudential.png') }}" alt="ICICI Prudential" class="h-32 grayscale hover:grayscale-0 transition" />
-    <img src="{{ url_for('static', filename='images/angelone.webp') }}" alt="Angel Broking" class="h-32 grayscale hover:grayscale-0 transition" />
-    <img src="{{ url_for('static', filename='images/starhealth.png') }}" alt="Star Health" class="h-20 grayscale hover:grayscale-0 transition" />
-    <img src="{{ url_for('static', filename='images/thomascook.png') }}" alt="Thomas Cook" class="h-24 grayscale hover:grayscale-0 transition" />
-  </div>
-</section>
-
-<!-- Why Choose Us -->
-<section class="bg-white py-20 px-6">
-  <h2 class="text-2xl font-bold text-center mb-10">Why Choose Scope Forex?</h2>
-  <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
-    {% set values = [
-      ("badge-check", "RBI Licensed"),
-      ("lock", "Secure & Transparent"),
-      ("users", "Trusted Partners"),
-      ("globe", "Global Coverage")
-    ] %}
-    {% for icon, label in values %}
-    <div class="flex flex-col items-center">
-      <i data-lucide="{{ icon }}" class="w-8 h-8 text-blue-800 mb-3"></i>
-      <p class="text-gray-700 font-medium">{{ label }}</p>
+  <!-- Mobile About Card -->
+  <section class="px-4 py-8 bg-white">
+    <div class="bg-blue-50 rounded-xl p-4 shadow">
+      <h3 class="text-lg font-semibold mb-2">Who We Are</h3>
+      <p class="text-sm text-gray-700">RBI-authorized Forex company offering foreign currency, remittances, insurance & investment support with trusted partners.</p>
     </div>
-    {% endfor %}
-  </div>
-</section>
+  </section>
 
-<!-- Final CTA -->
-<section class="py-12 px-6 bg-blue-900 text-white text-center">
-  <h2 class="text-2xl font-bold mb-3">Need Assistance?</h2>
-  <p class="mb-4">Reach out on WhatsApp or call us. We're happy to help.</p>
-  <a href="https://wa.me/919381111767" target="_blank" class="inline-flex items-center bg-yellow-400 text-black py-3 px-6 rounded-full font-semibold shadow hover:bg-yellow-300 transition">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.52 3.48A11.88 11.88 0 0012 0C5.373 0 0 5.373 0 12c0 2.123.555 4.144 1.61 5.955L0 24l6.26-1.617A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12a11.88 11.88 0 00-3.48-8.52zM12 22a9.93 9.93 0 01-5.104-1.414l-.365-.215-3.717.962.996-3.624-.236-.373A9.946 9.946 0 012 12C2 6.486 6.486 2 12 2c2.656 0 5.19 1.035 7.07 2.93A9.933 9.933 0 0122 12c0 5.514-4.486 10-10 10z"/>
-    </svg>
-    Chat on WhatsApp
-  </a>
-</section>
+  <!-- Compact Partner Logos -->
+  <section class="bg-gray-100 px-4 py-10">
+    <h3 class="text-xl font-bold text-center mb-6">Partners</h3>
+    <div class="grid grid-cols-3 gap-4 items-center justify-items-center">
+      <img src="{{ url_for('static', filename='images/rbl-bank.png') }}" alt="RBL" class="h-10" />
+      <img src="{{ url_for('static', filename='images/westernunion.jpg') }}" alt="WU" class="h-10" />
+      <img src="{{ url_for('static', filename='images/moneygram.png') }}" alt="MG" class="h-10" />
+      <img src="{{ url_for('static', filename='images/ria.png') }}" alt="RIA" class="h-10" />
+      <img src="{{ url_for('static', filename='images/iciciprudential.png') }}" alt="ICICI" class="h-10" />
+      <img src="{{ url_for('static', filename='images/angelone.webp') }}" alt="Angel" class="h-10" />
+    </div>
+  </section>
+
+  <!-- Values List -->
+  <section class="px-4 py-10 bg-white">
+    <h3 class="text-xl font-bold mb-4">Why Scope Forex?</h3>
+    <ul class="space-y-3 text-sm">
+      <li class="flex items-center gap-2"><span class="text-blue-700">✅</span> RBI Licensed</li>
+      <li class="flex items-center gap-2"><span class="text-blue-700">🔒</span> Safe Transactions</li>
+      <li class="flex items-center gap-2"><span class="text-blue-700">🌍</span> Global Coverage</li>
+      <li class="flex items-center gap-2"><span class="text-blue-700">🤝</span> Trusted Brands</li>
+    </ul>
+  </section>
+
+</div>
+
+<!-- 💻 Desktop Layout -->
+<div class="hidden md:block">
+  {% include "desktop_home.html" %}
+</div>
+
+<!-- Sticky CTA for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-blue-900 text-white flex justify-around items-center h-14 z-50">
+  <a href="tel:+919381111767" class="flex items-center gap-1 text-sm"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.43 2.43z" /></svg> Call</a>
+  <a href="https://wa.me/919381111767" class="flex items-center gap-1 text-sm"><img src="{{ url_for('static', filename='images/whatsapp-logo.svg') }}" alt="WhatsApp" class="h-5 w-5" /> Chat</a>
+</div>
 
 {% endblock %}
