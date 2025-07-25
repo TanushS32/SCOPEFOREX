@@ -1,0 +1,50 @@
+ <!-- Header Banner -->
+  <section class="bg-blue-900 text-white py-16 px-6 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Other Financial Services</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto">Beyond forex, Scope Forex Pvt. Ltd. offers health insurance, demat accounts, and mutual fund investments via trusted financial partners.</p>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+      <!-- Health Insurance -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://www.starhealth.in/static/media/star-health-logo.20210407160913.svg" alt="Star Health" class="h-8 mb-4">
+        <h2 class="text-xl font-semibold mb-3">Health Insurance</h2>
+        <p>Protect yourself and your family with health insurance plans from Star Health — offering comprehensive coverage for medical expenses, hospitalization, and more.</p>
+      </div>
+
+      <!-- Demat Accounts -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://assets.angelone.in/images/logo-black.svg" alt="Angel Broking" class="h-6 mb-4">
+        <h2 class="text-xl font-semibold mb-3">Demat Accounts</h2>
+        <p>Open a demat account with Angel Broking through Scope Forex to manage and hold your equity shares securely and digitally. Seamless process and quick KYC.</p>
+      </div>
+
+      <!-- Mutual Funds -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://companieslogo.com/img/orig/ICICIPRULI.NS-3d78f558.png?t=1614234532" alt="ICICI Prudential" class="h-8 mb-4">
+        <h2 class="text-xl font-semibold mb-3">Mutual Funds</h2>
+        <p>Invest in a wide range of mutual funds via ICICI Prudential and other leading AMCs. Whether you're a new or seasoned investor, we guide your financial growth.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trusted Partners -->
+  <section class="py-16 px-6 bg-white">
+    <h2 class="text-2xl font-bold text-center mb-10">Our Financial Partners</h2>
+    <div class="flex flex-wrap justify-center items-center gap-10 max-w-5xl mx-auto">
+      <img src="{{ url_for('static', filename='images/iciciprudential.png') }}" alt="ICICI Prudential Logo" loading="lazy" class="h-20 w-auto mx-auto" />
+      <img src="{{ url_for('static', filename='images/angelone.webp') }}" alt="Angel Broking Logo" loading="lazy" class="h-20 w-auto mx-auto" />
+      <img src="{{ url_for('static', filename='images/starhealth.png') }}" alt="Star Health Insurance Logo" loading="lazy" class="h-20 w-auto mx-auto" />
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-12 px-6 bg-blue-900 text-white text-center">
+    <h2 class="text-2xl font-bold mb-4">Looking to Secure Your Financial Future?</h2>
+    <p class="mb-6">Let Scope Forex help you with investment and insurance solutions tailored to your needs.</p>
+    <a href="contact.html" class="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full shadow hover:bg-yellow-300 transition">Get in Touch</a>
+  </section>

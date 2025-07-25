@@ -1,0 +1,79 @@
+<!-- Header Banner -->
+<section class="bg-blue-900 text-white py-16 px-6 text-center">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+  <p class="text-lg md:text-xl max-w-2xl mx-auto">Got questions? We’ve got answers about forex, remittances, cards, and more.</p>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-16 px-6 bg-gray-50">
+  <div class="max-w-4xl mx-auto space-y-6">
+
+    <!-- FAQ Item -->
+    <div class="bg-white rounded-xl shadow p-4">
+      <button onclick="toggleFAQ('faq1')" aria-expanded="false" aria-controls="faq1"
+        class="w-full text-left font-semibold text-lg text-blue-800 flex justify-between items-center">
+        What documents are required to exchange foreign currency?
+        <span>+</span>
+      </button>
+      <div id="faq1" class="hidden mt-2 text-gray-700">
+        Valid government-issued photo ID (Passport/PAN/Aadhaar), purpose declaration, and in some cases, ticket/visa depending on RBI norms.
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="bg-white rounded-xl shadow p-4">
+      <button onclick="toggleFAQ('faq2')" aria-expanded="false" aria-controls="faq2"
+        class="w-full text-left font-semibold text-lg text-blue-800 flex justify-between items-center">
+        How much foreign currency can I buy for personal travel?
+        <span>+</span>
+      </button>
+      <div id="faq2" class="hidden mt-2 text-gray-700">
+        As per RBI guidelines, individuals can carry up to USD 3,000 in cash and a total of USD 2,50,000 per financial year under the Liberalised Remittance Scheme (LRS).
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="bg-white rounded-xl shadow p-4">
+      <button onclick="toggleFAQ('faq3')" aria-expanded="false" aria-controls="faq3"
+        class="w-full text-left font-semibold text-lg text-blue-800 flex justify-between items-center">
+        What is a prepaid forex card and where can I use it?
+        <span>+</span>
+      </button>
+      <div id="faq3" class="hidden mt-2 text-gray-700">
+        A prepaid forex card allows you to load foreign currency before travel. It works like a debit card and can be used at international ATMs, stores, and online merchants.
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="bg-white rounded-xl shadow p-4">
+      <button onclick="toggleFAQ('faq4')" aria-expanded="false" aria-controls="faq4"
+        class="w-full text-left font-semibold text-lg text-blue-800 flex justify-between items-center">
+        Can I send money abroad for education or medical expenses?
+        <span>+</span>
+      </button>
+      <div id="faq4" class="hidden mt-2 text-gray-700">
+        Yes. Scope Forex facilitates outward remittances for education, medical treatment, gifts, and more under RBI's LRS. Documents like invoices, admission letters, or medical reports are required.
+      </div>
+    </div>
+
+    <!-- FAQ Item -->
+    <div class="bg-white rounded-xl shadow p-4">
+      <button onclick="toggleFAQ('faq5')" aria-expanded="false" aria-controls="faq5"
+        class="w-full text-left font-semibold text-lg text-blue-800 flex justify-between items-center">
+        How can I receive money from abroad?
+        <span>+</span>
+      </button>
+      <div id="faq5" class="hidden mt-2 text-gray-700">
+        You can receive international funds via Western Union, MoneyGram, or RIA at our branch. A valid government ID and transaction code are needed for collection.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-12 px-6 bg-blue-900 text-white text-center">
+  <h2 class="text-2xl font-bold mb-4">Still have questions?</h2>
+  <p class="mb-6">We’re here to help. Contact our team for personalized guidance.</p>
+  <a href="{{ url_for('contact') }}" class="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full shadow hover:bg-yellow-300 transition">Contact Support</a>
+</section>

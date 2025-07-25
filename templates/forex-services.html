@@ -4,62 +4,55 @@
 
 {% block content %}
 
-  <!-- Header Banner -->
-  <section class="bg-blue-900 text-white py-16 px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Forex Services</h1>
-    <p class="text-lg md:text-xl max-w-2xl mx-auto">We specialize in foreign exchange solutions tailored for individuals, travelers, and global businesses — all under RBI regulation.</p>
+<!-- 📱 Mobile Layout -->
+<div class="block md:hidden">
+
+  <!-- Mobile Hero -->
+  <section class="bg-blue-900 text-white py-12 px-4 text-center">
+    <h1 class="text-3xl font-bold mb-3">Forex Services</h1>
+    <p class="text-sm">Foreign currency, remittances & cards – fast, secure & RBI-compliant.</p>
   </section>
 
-  <!-- Services Grid -->
-  <section class="py-16 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-      
-      <!-- Foreign Currency Exchange -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h2 class="text-2xl font-semibold mb-3">Foreign Currency Exchange</h2>
-        <p>Buy or sell over 40 international currencies at competitive rates. Whether you're traveling or repatriating funds, we offer fast and RBI-compliant conversions.</p>
+  <!-- Service Cards -->
+  <section class="py-10 px-4 bg-gray-100 space-y-4">
+    {% set services = [
+      ("💱", "Currency Exchange", "Buy/sell 40+ global currencies at RBI-approved rates."),
+      ("💳", "Forex Cards", "Prepaid travel cards loaded with multiple currencies."),
+      ("📤", "Outward Remittance", "Send funds abroad for education, medical needs, family."),
+      ("🛡️", "Travel Insurance", "Global medical/travel coverage with partners like Star Health."),
+      ("📥", "Receive Money", "Withdraw funds from Western Union, RIA & MoneyGram.")
+    ] %}
+    {% for icon, title, desc in services %}
+    <div class="bg-white p-4 rounded-xl shadow">
+      <div class="flex items-center mb-2">
+        <span class="text-2xl mr-2">{{ icon }}</span>
+        <h3 class="text-base font-semibold">{{ title }}</h3>
       </div>
+      <p class="text-sm text-gray-700">{{ desc }}</p>
+    </div>
+    {% endfor %}
+  </section>
 
-      <!-- Forex Cards -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h2 class="text-2xl font-semibold mb-3">Prepaid Forex Cards</h2>
-        <p>Load multiple currencies onto a single card, ideal for students, tourists, or corporate travelers. Accepted globally and safer than carrying cash.</p>
-      </div>
-
-      <!-- Wire Transfers -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h2 class="text-2xl font-semibold mb-3">Outward Remittances</h2>
-        <p>Send money abroad for education, medical treatment, family maintenance, or investments. We process transactions securely under RBI’s Liberalised Remittance Scheme (LRS).</p>
-      </div>
-
-      <!-- Travel Insurance -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <h2 class="text-2xl font-semibold mb-3">Travel Insurance</h2>
-        <p>Get international travel insurance at affordable premiums, covering medical, trip delays, and baggage loss. Partnered with Star Health and more.</p>
-      </div>
-
-      <!-- Receive Money -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition md:col-span-2">
-        <h2 class="text-2xl font-semibold mb-3">Receive Money from Abroad</h2>
-        <p>Quick and secure receipt of funds from loved ones using Western Union, MoneyGram, or RIA. We verify, process, and release payouts swiftly with full KYC compliance.</p>
-      </div>
-
+  <!-- Compliance -->
+  <section class="py-8 px-4 bg-white">
+    <div class="bg-blue-50 rounded-xl p-4 shadow text-sm">
+      <h3 class="text-base font-semibold mb-2 text-blue-900">100% RBI Compliant</h3>
+      <p>All services are performed under RBI’s LRS and FEMA guidelines. Full KYC required. We ensure traceable and transparent operations.</p>
     </div>
   </section>
 
-  <!-- Compliance Section -->
-  <section class="py-12 px-6 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-xl font-bold mb-4">100% RBI-Compliant Services</h3>
-      <p class="text-lg text-gray-700">Every forex transaction is conducted under RBI guidelines, with transparent documentation, KYC procedures, and secure handling.</p>
-    </div>
+  <!-- CTA -->
+  <section class="py-10 px-4 bg-blue-900 text-white text-center">
+    <h2 class="text-lg font-bold mb-2">Need Forex Help?</h2>
+    <p class="text-sm mb-4">Talk to our expert team to choose the right solution.</p>
+    <a href="{{ url_for('contact') }}" class="bg-yellow-400 text-black font-semibold py-2 px-5 rounded-full shadow hover:bg-yellow-300 transition">Contact Us</a>
   </section>
 
-  <!-- Call to Action -->
-  <section class="py-12 px-6 bg-blue-900 text-white text-center">
-    <h2 class="text-2xl font-bold mb-4">Need Help Choosing the Right Forex Service?</h2>
-    <p class="mb-6">We’re just a message away. Talk to our team for assistance or bookings.</p>
-    <a href="contact.html" class="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full shadow hover:bg-yellow-300 transition">Contact Us</a>
-  </section>
+</div>
 
-  {% endblock %}
+<!-- 💻 Desktop Layout -->
+<div class="hidden md:block">
+  {% include "desktop_forex_services.html" %}
+</div>
+
+{% endblock %}

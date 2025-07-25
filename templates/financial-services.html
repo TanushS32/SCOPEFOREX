@@ -4,55 +4,58 @@
 
 {% block content %}
 
-  <!-- Header Banner -->
-  <section class="bg-blue-900 text-white py-16 px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Other Financial Services</h1>
-    <p class="text-lg md:text-xl max-w-2xl mx-auto">Beyond forex, Scope Forex Pvt. Ltd. offers health insurance, demat accounts, and mutual fund investments via trusted financial partners.</p>
+<!-- 📱 Mobile Layout -->
+<div class="block md:hidden">
+
+  <!-- Mobile Header -->
+  <section class="bg-blue-900 text-white py-12 px-4 text-center">
+    <h1 class="text-3xl font-bold mb-2">Financial Services</h1>
+    <p class="text-sm">Secure health, invest smart, and grow wealth — with trusted partners.</p>
   </section>
 
-  <!-- Services Grid -->
-  <section class="py-16 px-6 bg-gray-50">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+  <!-- Mobile Financial Services -->
+  <section class="py-8 px-4 bg-gray-100 space-y-4">
+    <div class="bg-white p-4 rounded-xl shadow">
+      <img src="https://www.starhealth.in/static/media/star-health-logo.20210407160913.svg" alt="Star Health" class="h-6 mb-2">
+      <h3 class="text-base font-semibold">Health Insurance</h3>
+      <p class="text-sm text-gray-600">Plans from Star Health covering hospitalization & medical expenses.</p>
+    </div>
 
-      <!-- Health Insurance -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <img src="https://www.starhealth.in/static/media/star-health-logo.20210407160913.svg" alt="Star Health" class="h-8 mb-4">
-        <h2 class="text-xl font-semibold mb-3">Health Insurance</h2>
-        <p>Protect yourself and your family with health insurance plans from Star Health — offering comprehensive coverage for medical expenses, hospitalization, and more.</p>
-      </div>
+    <div class="bg-white p-4 rounded-xl shadow">
+      <img src="https://assets.angelone.in/images/logo-black.svg" alt="Angel Broking" class="h-5 mb-2">
+      <h3 class="text-base font-semibold">Demat Accounts</h3>
+      <p class="text-sm text-gray-600">Open a demat account with Angel Broking — digital & secure.</p>
+    </div>
 
-      <!-- Demat Accounts -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <img src="https://assets.angelone.in/images/logo-black.svg" alt="Angel Broking" class="h-6 mb-4">
-        <h2 class="text-xl font-semibold mb-3">Demat Accounts</h2>
-        <p>Open a demat account with Angel Broking through Scope Forex to manage and hold your equity shares securely and digitally. Seamless process and quick KYC.</p>
-      </div>
-
-      <!-- Mutual Funds -->
-      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
-        <img src="https://companieslogo.com/img/orig/ICICIPRULI.NS-3d78f558.png?t=1614234532" alt="ICICI Prudential" class="h-8 mb-4">
-        <h2 class="text-xl font-semibold mb-3">Mutual Funds</h2>
-        <p>Invest in a wide range of mutual funds via ICICI Prudential and other leading AMCs. Whether you're a new or seasoned investor, we guide your financial growth.</p>
-      </div>
-
+    <div class="bg-white p-4 rounded-xl shadow">
+      <img src="https://companieslogo.com/img/orig/ICICIPRULI.NS-3d78f558.png?t=1614234532" alt="ICICI Prudential" class="h-6 mb-2">
+      <h3 class="text-base font-semibold">Mutual Funds</h3>
+      <p class="text-sm text-gray-600">Invest in top-performing funds via ICICI Prudential & others.</p>
     </div>
   </section>
 
-  <!-- Trusted Partners -->
-  <section class="py-16 px-6 bg-white">
-    <h2 class="text-2xl font-bold text-center mb-10">Our Financial Partners</h2>
-    <div class="flex flex-wrap justify-center items-center gap-10 max-w-5xl mx-auto">
-      <img src="{{ url_for('static', filename='images/iciciprudential.png') }}" alt="ICICI Prudential Logo" loading="lazy" class="h-20 w-auto mx-auto" />
-      <img src="{{ url_for('static', filename='images/angelone.webp') }}" alt="Angel Broking Logo" loading="lazy" class="h-20 w-auto mx-auto" />
-      <img src="{{ url_for('static', filename='images/starhealth.png') }}" alt="Star Health Insurance Logo" loading="lazy" class="h-20 w-auto mx-auto" />
+  <!-- Partner Logos -->
+  <section class="py-10 px-4 bg-white">
+    <h3 class="text-xl font-bold text-center mb-6">Our Financial Partners</h3>
+    <div class="grid grid-cols-3 gap-4 items-center justify-items-center">
+      <img src="{{ url_for('static', filename='images/starhealth.png') }}" alt="Star Health" class="h-10">
+      <img src="{{ url_for('static', filename='images/angelone.webp') }}" alt="Angel Broking" class="h-10">
+      <img src="{{ url_for('static', filename='images/iciciprudential.png') }}" alt="ICICI Prudential" class="h-10">
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="py-12 px-6 bg-blue-900 text-white text-center">
-    <h2 class="text-2xl font-bold mb-4">Looking to Secure Your Financial Future?</h2>
-    <p class="mb-6">Let Scope Forex help you with investment and insurance solutions tailored to your needs.</p>
-    <a href="contact.html" class="bg-yellow-400 text-black font-semibold py-2 px-6 rounded-full shadow hover:bg-yellow-300 transition">Get in Touch</a>
+  <!-- Mobile CTA -->
+  <section class="py-10 px-4 bg-yellow-400 text-center text-black">
+    <h2 class="text-xl font-bold mb-2">Need Help with Finances?</h2>
+    <p class="text-sm mb-3">We’ll guide you through insurance and investment options.</p>
+    <a href="{{ url_for('contact') }}" class="bg-black text-white text-sm py-2 px-6 rounded-full">Get in Touch</a>
   </section>
 
-  {% endblock %}
+</div>
+
+<!-- 💻 Desktop Layout -->
+<div class="hidden md:block">
+  {% include "desktop_financial_services.html" %}
+</div>
+
+{% endblock %}
