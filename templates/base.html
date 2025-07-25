@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>{% block title %}Scope Forex Pvt. Ltd.{% endblock %}</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Scope Forex Pvt. Ltd. is your trusted RBI-licensed partner for forex, remittances, and financial services.">
+  <meta name="keywords" content="forex, currency exchange, remittance, wire transfer, forex card, Chennai, RBI licensed">
+  <meta name="author" content="Scope Forex Pvt. Ltd.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Scope Forex Pvt. Ltd." />
+  <meta property="og:description" content="RBI-licensed forex and financial services provider in Chennai." />
+  <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg') }}" />
+  <meta property="og:url" content="https://www.scopeforex.in/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scope Forex Pvt. Ltd.">
+  <meta name="twitter:description" content="Trusted foreign exchange & financial services.">
+  <meta name="twitter:image" content="{{ url_for('static', filename='images/og-image.jpg') }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/YOURKITID.js" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome (replace with actual kit ID) -->
+  <script src="https://kit.fontawesome.com/YOUR_ACTUAL_KIT_ID.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="font-sans bg-white text-gray-900">
 
   {% include "navbar.html" %}
@@ -17,6 +45,50 @@
 
   {% include "whatsapp.html" %}
   {% include "footer.html" %}
-  
+
+  <!-- Google Analytics (replace G-XXXXXXX with actual ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <script>
+  function toggleFAQ(id) {
+    const faqItem = document.getElementById(id);
+    const button = faqItem?.previousElementSibling;
+
+    if (faqItem.classList.contains('hidden')) {
+      faqItem.classList.remove('hidden');
+      faqItem.classList.add('mt-2', 'transition-all', 'duration-300');
+      button.querySelector('span').textContent = '−';
+      button.setAttribute('aria-expanded', 'true');
+    } else {
+      faqItem.classList.add('hidden');
+      faqItem.classList.remove('transition-all');
+      button.querySelector('span').textContent = '+';
+      button.setAttribute('aria-expanded', 'false');
+    }
+  }
+</script>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('max-h-0')) {
+      mobileMenu.classList.remove('max-h-0');
+      mobileMenu.classList.add('max-h-96');
+    } else {
+      mobileMenu.classList.add('max-h-0');
+      mobileMenu.classList.remove('max-h-96');
+    }
+  });
+</script>
+
+
+
 </body>
 </html>
