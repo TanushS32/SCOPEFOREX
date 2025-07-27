@@ -1,6 +1,6 @@
 from flask import Flask, render_template, send_from_directory
 
-app = Flask(name)
+app = Flask(__name__)
 
 # Homepage
 @app.route("/")
@@ -43,5 +43,5 @@ def favicon():
     return send_from_directory("static", "favicon.ico")
 
 # Run the Flask app
-if name == "main":
+if __name__ == "__main__":
     app.run(debug=True)
