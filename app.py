@@ -1,6 +1,6 @@
 from flask import Flask, render_template, send_from_directory
 
-app = Flask(__name__)
+app = Flask(name)
 
 # Homepage
 @app.route("/")
@@ -32,11 +32,16 @@ def faqs():
 def contact():
     return render_template("contact.html")
 
-# Static files (e.g. favicon or images fallback)
+# Sitemap route
+@app.route("/sitemap.xml")
+def sitemap():
+    return send_from_directory("static", "sitemap.xml")
+
+# Favicon
 @app.route("/favicon.ico")
 def favicon():
     return send_from_directory("static", "favicon.ico")
 
 # Run the Flask app
-if __name__ == "__main__":
+if name == "main":
     app.run(debug=True)
