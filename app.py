@@ -42,11 +42,11 @@ def favicon():
 @app.route("/sitemap.xml")
 def sitemap():
     pages = [
-        {"loc": "https://www.scopeforex.in/", "priority": "1.0", "changefreq": "daily"},
-        {"loc": "https://www.scopeforex.in/forex-services", "priority": "0.9", "changefreq": "weekly"},
-        {"loc": "https://www.scopeforex.in/financial-services", "priority": "0.8", "changefreq": "weekly"},
-        {"loc": "https://www.scopeforex.in/faqs", "priority": "0.6", "changefreq": "monthly"},
-        {"loc": "https://www.scopeforex.in/contact", "priority": "0.6", "changefreq": "monthly"},
+        {"loc": "https://www.scopeforex.com/", "priority": "1.0", "changefreq": "daily"},
+        {"loc": "https://www.scopeforex.com/forex-services", "priority": "0.9", "changefreq": "weekly"},
+        {"loc": "https://www.scopeforex.com/financial-services", "priority": "0.8", "changefreq": "weekly"},
+        {"loc": "https://www.scopeforex.com/faqs", "priority": "0.6", "changefreq": "monthly"},
+        {"loc": "https://www.scopeforex.com/contact", "priority": "0.6", "changefreq": "monthly"},
     ]
     lastmod = datetime.datetime.utcnow().date().isoformat()
     return render_template("sitemap.xml", pages=pages, lastmod=lastmod), 200, {'Content-Type': 'application/xml'}
@@ -57,7 +57,7 @@ def robots_txt():
     content = """User-agent: *
 Disallow:
 
-Sitemap: https://www.scopeforex.in/sitemap.xml
+Sitemap: https://www.scopeforex.com/sitemap.xml
 """
     return Response(content, mimetype='text/plain')
 
